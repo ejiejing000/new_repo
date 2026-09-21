@@ -1,0 +1,27 @@
+{
+  "name": "new_repo",
+  "version": "1.0.0",
+  "description": "practice",
+  "keywords": [
+    "practice",
+    "branch"
+  ],
+  "homepage": "https://github.com/ejiejing000/new_repo#readme",
+  "bugs": {
+    "url": "https://github.com/ejiejing000/new_repo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejiejing000/new_repo.git"
+  },
+  "license": "ISC",
+  "author": "ejiemarq",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
