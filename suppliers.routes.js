@@ -47,6 +47,17 @@ router.post('/', (req, res) => {
     sendResponse(res, 201, [newSupplier]);
 });
 
+// 6. DELETE: Removes an item by its ID
+router.delete('/:id', (req, res) => {
+    const initialLength = suppliers.length;
+    suppliers = suppliers.filter(s => s.id !== parseInt(req.params.id));
+    
+    // If the length didn't change, the ID wasn't found
+    if (suppliers.length === initialLength) return res.status(404).json({ success: false, error: { code: "NOT_FOUND", message: "Supplier not found." }});
+    
+    // 204 means successfully deleted, send no content back
+    res.status(204).send();
+});
 
 // 7. EXPORT: Makes this file available to index.js
 module.exports = router;
